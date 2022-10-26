@@ -1776,18 +1776,23 @@ input, select, textarea {
 
 		ul.social li {
 			position: relative;
-			display: inline-block;
 			margin: 0.25em;
 			top: 0;
 			padding-left: 0;
 		}
+
+
+			ul.social li i {
+				width: 32px;
+				height: 32px;
+				display:inline-block;
+			}
 
 			ul.social li a {
 				-moz-transition: top .2s ease-in-out;
 				-webkit-transition: top .2s ease-in-out;
 				-ms-transition: top .2s ease-in-out;
 				transition: top .2s ease-in-out;
-				display: block;
 				width: 48px;
 				height: 48px;
 				border-radius: 6px;
