@@ -2270,7 +2270,7 @@ body.is-menu-visible #menu {
 	}
 
 		.box.style1 {
-			padding: 3em 2em 3.5em 0em;
+			padding: 3em 2em 3.5em 2em;
 		}
 
 			.box.style1 h3 {
@@ -2287,6 +2287,10 @@ body.is-menu-visible #menu {
 			top: 2em;
 			margin: -4em 0 4em -4em;
 			width: auto;
+		}
+
+		.box_title{
+			text-align: center;
 		}
 
 /* Icons */
