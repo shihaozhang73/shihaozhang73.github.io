@@ -2270,7 +2270,7 @@ body.is-menu-visible #menu {
 	}
 
 		.box.style1 {
-			padding: 3em 2em 3.5em 2em;
+			padding: 3em 2em 3.5em 0em;
 		}
 
 			.box.style1 h3 {
