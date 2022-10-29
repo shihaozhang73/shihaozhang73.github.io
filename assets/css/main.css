@@ -2806,7 +2806,15 @@ body.is-menu-visible #menu {
 	@media screen and (max-width: 736px) {
 
 		#wrapper > * > .inner {
-			padding: 0 1.25em;
+			padding: 0;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#wrapper > * > .inner {
+			padding: 0 1.5em;
 		}
 
 	}
