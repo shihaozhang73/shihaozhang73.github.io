@@ -2547,7 +2547,7 @@ body.is-menu-visible #menu {
 
 			.wrapper {
 				padding: 5em 0 5em 0;
-				text-align: center;
+				text-align: left;
 			}
 
 				.wrapper.style4 .row-special {
@@ -2576,7 +2576,7 @@ body.is-menu-visible #menu {
 		/* Articles */
 
 			#top {
-				text-align: center;
+				text-align: left;
 				padding: 5em 0;
 			}
 
@@ -2732,7 +2732,7 @@ body.is-menu-visible #menu {
 
 			.wrapper {
 				padding: 3em 0;
-				text-align: center;
+				text-align: left;
 			}
 
 		/* Nav */
