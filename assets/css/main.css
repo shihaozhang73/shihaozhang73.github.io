@@ -2265,7 +2265,7 @@ body.is-menu-visible #menu {
 	.box {
 		background: #fff;
 		
-		text-align: left;
+		text-align: justify;
 		padding: 2em;
 	}
 
@@ -2345,7 +2345,7 @@ body.is-menu-visible #menu {
 	.wrapper {
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		padding: 3em 0 3em 0;
-		text-align: left;
+		text-align: justify;
 	}
 
 		.wrapper.style1 {
@@ -2460,7 +2460,7 @@ body.is-menu-visible #menu {
 
 	#top {
 		padding: 10em 0 10em 0;
-		text-align: left;
+		text-align: justify;
 	}
 
 		#top .image {
@@ -2551,7 +2551,7 @@ body.is-menu-visible #menu {
 
 			.wrapper {
 				padding: 5em 0 5em 0;
-				text-align: left;
+				text-align: justify;
 			}
 
 				.wrapper.style4 .row-special {
@@ -2580,7 +2580,7 @@ body.is-menu-visible #menu {
 		/* Articles */
 
 			#top {
-				text-align: center;
+				text-align: justify;
 				padding: 5em 0;
 			}
 
@@ -2736,7 +2736,7 @@ body.is-menu-visible #menu {
 
 			.wrapper {
 				padding: 3em 0;
-				text-align: left;
+				text-align: justify;
 			}
 
 		/* Nav */
@@ -2771,6 +2771,7 @@ body.is-menu-visible #menu {
 
 				#top p {
 					font-size: 1em;
+					text-align: justify;
 				}
 
 			#contact footer {
