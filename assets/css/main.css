@@ -2547,7 +2547,7 @@ body.is-menu-visible #menu {
 
 			.wrapper {
 				padding: 5em 0 5em 0;
-				text-align: left;
+				text-align: center;
 			}
 
 				.wrapper.style4 .row-special {
@@ -2576,7 +2576,7 @@ body.is-menu-visible #menu {
 		/* Articles */
 
 			#top {
-				text-align: left;
+				text-align: center;
 				padding: 5em 0;
 			}
 
@@ -2732,7 +2732,7 @@ body.is-menu-visible #menu {
 
 			.wrapper {
 				padding: 3em 0;
-				text-align: left;
+				text-align: center;
 			}
 
 		/* Nav */
@@ -2798,7 +2798,7 @@ body.is-menu-visible #menu {
 
 #wrapper > * > .inner {
 	width: 100%;
-	max-width: 69em;
+	max-width: 70em;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -2806,7 +2806,7 @@ body.is-menu-visible #menu {
 	@media screen and (max-width: 736px) {
 
 		#wrapper > * > .inner {
-			padding: 0 1.25em;
+			padding: 0;
 		}
 
 	}
