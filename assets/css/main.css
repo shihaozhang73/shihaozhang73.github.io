@@ -2460,7 +2460,7 @@ body.is-menu-visible #menu {
 
 	#top {
 		padding: 10em 0 10em 0;
-		text-align: justify;
+		text-align: left;
 	}
 
 		#top .image {
@@ -2481,6 +2481,7 @@ body.is-menu-visible #menu {
 		#top p {
 			font-size: 1.5em;
 			line-height: 1.75em;
+			text-align: justify;
 		}
 
 			#top p a {
@@ -2580,8 +2581,12 @@ body.is-menu-visible #menu {
 		/* Articles */
 
 			#top {
-				text-align: justify;
+				text-align: center;
 				padding: 5em 0;
+			}
+
+			#top p {
+				text-align: justify;
 			}
 
 				#top .image {
@@ -2771,7 +2776,6 @@ body.is-menu-visible #menu {
 
 				#top p {
 					font-size: 1em;
-					text-align: justify;
 				}
 
 			#contact footer {
