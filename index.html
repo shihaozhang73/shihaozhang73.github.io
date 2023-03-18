@@ -12,6 +12,37 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+    <script>
+        function includeTemplate() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("include-template");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("include-template");
+                  includeTemplate();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+    </script>
+
 	<body class="is-preload">
 		<div id="wrapper">
 			<header id="header">
@@ -35,27 +66,12 @@
 	<!-- Menu -->
 			<nav id="menu">
 				<div class="inner">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-						<li><a href="publications.html">Publications</a></li>
-						<li><a href="experiences.html">Experiences</a></li>
-						<li><a href="contact.html">Contact</a></li>
+					<ul include-template="header.txt">
 					</ul>
 				</div>
 			</nav>
 		</div>
 		
-		
-		<!-- Nav --> <!--
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>-->
 
 		<!-- Home -->
 			<article id="top" class="wrapper style1">
@@ -69,9 +85,9 @@
 								<ul class="social">
 									
 									<li><i class="icon solid fa-map-marker"></i><span>Guangzhou, China</span></li>
-									<li><i class="icon solid fa-envelope"></i><span><a href="jansiozsh@163.com">jansiozsh@163.com</a></span></li>
-									<li><i class="icon solid fa-graduation-cap"></i><span><a href="#">Google Scholar</a>/<a href="#">Google Scholar</a></span></li>
-									<li><i class="icon brands fa-github"></i><a href="https://github.com/shihaozhangzsh">Github</a></li>
+									<li><i class="icon solid fa-envelope"></i><span><a href="mailto:jansiozsh@163.com">jansiozsh@163.com</a></span></li>
+									<li><i class="icon solid fa-graduation-cap"></i><span><a href="#">Google Scholar</a>&nbsp/&nbsp<a href="#">Google Scholar</a></span></li>
+									<li><i class="icon brands fa-github"></i><a href="https://github.com/shihaozhang73" target="_blank">Github</a></li>
 
 									<!--
 									<li><a href="#" class="icon solid fa-envelope"><span class="label">Twitter</span></a></li>
@@ -97,8 +113,8 @@
 							</div>
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
-							<h2>About me</h2>
-							<p>I am a PhD student .
+							<h2>ABOUT</h2>
+							<p>I am a PhD student . <a href="cv.pdf" target="_blank">this link</a>
 							</p>
 						</div>
 					</div>
@@ -147,11 +163,12 @@
 					<header>
 						<h2>News</h2>
 						<hr>
-						<p>I am so glad to receive</p>
 					</header>
+
+					<p>I am so glad to receive </p>
+
 					<footer>
-						<ul id="copyright", style="text-align: center;">
-							<li>&copy; 2022-2023 by Shihao Zhang. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<ul id="copyright" include-template="footer.txt", style="text-align: center;">
 						</ul>
 					</footer>
 					
@@ -166,6 +183,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>includeTemplate()</script>
 
 	</body>
 </html>

@@ -12,6 +12,37 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+    <script>
+        function includeTemplate() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("include-template");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("include-template");
+                  includeTemplate();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+    </script>
+
 	<body class="is-preload">
 		<div id="wrapper">
 			<header id="header">
@@ -35,27 +66,11 @@
 	<!-- Menu -->
 			<nav id="menu">
 				<div class="inner">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-						<li><a href="publications.html">Publications</a></li>
-						<li><a href="experiences.html">Experiences</a></li>
-						<li><a href="contact.html">Contact</a></li>
+					<ul include-template="header.txt">
 					</ul>
 				</div>
 			</nav>
 		</div>
-		
-		
-		<!-- Nav --> <!--
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>-->
 
 		<!-- Home -->
 			<article class="wrapper style3">
@@ -63,11 +78,12 @@
 					<header>
 						<h2>Publications</h2>
 						<hr>
-						<p></p>
 					</header>
+
+
+					
 					<footer>
-						<ul id="copyright", style="text-align: center;">
-							<li>&copy; 2022-2023 by Shihao Zhang. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<ul id="copyright" include-template="footer.txt", style="text-align: center;">
 						</ul>
 					</footer>
 					
@@ -82,6 +98,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>includeTemplate()</script>
 
 	</body>
 </html>
