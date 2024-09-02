@@ -1,1 +1,1 @@
-<li>&copy; 2022-2023 by Shihao Zhang. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+<li>&copy; 2022-2024 by Shihao Zhang. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
